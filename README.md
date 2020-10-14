@@ -20,6 +20,7 @@ To run the app in development go into the TASK/app directory and run:
 yarn install
 yarn start
 ```
+Now you can open the app by using the http://localhost:8080 url.
 
 To build it use the following command:
 ```
