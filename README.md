@@ -16,10 +16,14 @@ Your answer:
 I've created the project using the create-react-app toolchain as it provides some good out-of-the-box webpack configuration and adding scss support is as easy as installing the 'sass' package.
 
 To run the app in development go into the TASK/app directory and run:
+```
 yarn install
 yarn start
+```
 
 To build it use the following command:
+```
 yarn build
+```
 
 There are a lot of places where the attached code could be improved/refactored, but the provided solution should satisfy all raised points.
