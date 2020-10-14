@@ -1,0 +1,24 @@
+@import '../../scss/settings';
+
+.banner {
+  padding: 20px 0 16px 0;
+  background: $grey;
+
+  @include desktop() {
+    padding: 25px 0 21px 0;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    font-family: $font-lalezar;
+    margin: 0;
+    color: $white;
+
+    @include desktop() {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+    }
+  }
+}

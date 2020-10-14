@@ -1,0 +1,51 @@
+@import '../../scss/settings';
+
+.menu {
+  z-index: $menu-z-index;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+  gap: 50px;
+  visibility: hidden;
+
+  @include desktop() {
+    position: absolute;
+    width: calc(20% + 64px);
+    height: 100%;
+    left: calc(-20% - 64px);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 100px;
+    border-right: thin solid $white;
+  }
+
+  &.menu--is-open {
+    left: 0;
+    visibility: initial;
+  }
+
+  .menu__item {
+    color: $white;
+    font-family: $font-lalezar;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+    text-decoration: none;
+
+    @include desktop() {
+      margin-left: 36px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

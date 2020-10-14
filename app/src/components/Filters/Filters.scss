@@ -1,0 +1,128 @@
+@import '../../scss/settings';
+
+.filters {
+  padding: 0 8px;
+
+  @include desktop() {
+    padding: 0 32px;
+  }
+
+  .filters__icon {
+    position: relative;
+    width: 17px;
+
+    @include desktop() {
+      display: none;
+    }
+
+    &:before,
+    &:after {
+      background-color: $grey;
+      content: '';
+      display: block;
+      height: 3px;
+      transition: all .3s ease-in-out;
+    }
+
+    &:after {
+      transform: translateY(-3px) rotate(90deg);
+    }
+
+    &.filters__icon--is-transformed {
+      &:before {
+        height: 0;
+      }
+
+      &:after {
+        transform: translateY(-3px);
+      } 
+    }
+  }
+
+  .filters__label {
+    display: flex;
+    margin: 32px 0 16px 0;
+    padding: 4px 0;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    font-family: $font-lalezar;
+    color: $grey;
+    border-bottom: thin solid $grey;
+    cursor: pointer;
+
+    @include desktop() {
+      cursor: default;
+    }
+  }
+
+  .filters__content {
+    margin-top: 16px;
+    max-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: max-height .3s;
+
+    @include desktop() {
+      max-height: initial;
+    }
+
+    &.filters__content--is-active {
+      max-height: 150px;
+    }
+
+    .filter {
+      .filter__name {
+        margin: 16px 0 8px 0;
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+        font-family: $font-lalezar;
+        color: $grey;
+      }
+
+      .filter__option {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        color: $grey;
+        cursor: pointer;
+        margin: 4px 0;
+
+        .checkbox {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .checkbox__input {
+            appearance: unset;
+            width: 13px;
+            height: 13px;
+            border: 2px solid $checkbox-border;
+            overflow: visible;
+            background: $checkbox-background;
+            border-radius: 3px;
+
+            + .checkbox__tick {
+              display: none;
+              position: absolute;
+              top: 0;
+              left: 5px;
+              width: 17px;
+              height: 17px;
+              background: url("../../assets/images/icons/checked.svg");
+              background-size: 17px 17px;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+  
+            &:checked + .checkbox__tick {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

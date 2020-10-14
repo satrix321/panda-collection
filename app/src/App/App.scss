@@ -1,0 +1,26 @@
+@import '../scss/settings';
+
+.app {
+  position: relative;
+}
+
+.content {
+  @include desktop() {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.product-list {
+  @include desktop() {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 15px;
+    margin-top: 24px;
+    padding-left: 32px;
+    padding-right: 64px;
+    box-sizing: border-box;
+  }
+}

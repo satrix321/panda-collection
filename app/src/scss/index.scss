@@ -1,0 +1,37 @@
+@import './settings';
+
+@font-face {
+  font-family: 'Lalezar';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lalezar'),
+       local('Lalezar-Regular'),
+       url(../assets/fonts/lalezar/Lalezar-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Dejavu Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Dejavu Sans'),
+       local('Dejavu-Sans-Regular'),
+       url(../assets/fonts/dejavu-sans/DejaVuSans.ttf) format('truetype');
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: $font-dejavuSans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
